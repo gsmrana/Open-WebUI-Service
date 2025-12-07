@@ -1,0 +1,9 @@
+[project]
+name = "openwebui_service"
+version = "0.1.0"
+description = "Open WebUI Service"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "open-webui>=0.6.41",
+]

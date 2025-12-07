@@ -1,0 +1,16 @@
+[Unit]
+Description=Open WebUI Service
+After=network.target
+
+[Service]
+ExecStart=/srv/OpenWebUI_Service/.venv/bin/open-webui serve
+WorkingDirectory=/srv/OpenWebUI_Service
+Restart=always
+User=mega
+Group=mega
+#StandardOutput=null
+#StandardError=journal
+#Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
