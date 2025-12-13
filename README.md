@@ -16,7 +16,6 @@ Install packages in a virtual environment
 
 ```
 uv sync
-cp .env.sample .env
 ```
 
 Upgrade all packages
@@ -26,7 +25,7 @@ uv lock --upgrade
 uv sync
 ```
 
-## Install and run systemd service.
+## Install and run systemd service (Linux)
 
 ```
 sudo cp open_webui.service /etc/systemd/system/open_webui.service
