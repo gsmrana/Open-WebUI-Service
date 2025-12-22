@@ -8,7 +8,7 @@ Install Python and UV Package Manager
 https://docs.astral.sh/uv/getting-started/installation
 
 ```
-winget install --id Python.Python.3.12
+winget install --id Python.Python.3.11
 winget install --id=astral-sh.uv  -e
 ```
 
@@ -25,6 +25,13 @@ uv lock --upgrade
 uv sync
 ```
 
+## Run the application
+
+```
+uv run open-webui serve
+```
+- Browse: http://localhost:8080
+
 ## Install and run systemd service (Linux)
 
 ```
@@ -33,5 +40,3 @@ sudo systemctl daemon-reload
 sudo systemctl enable open_webui.service
 sudo systemctl restart open_webui.service
 ```
-
-- Browse url: http://localhost:8080
