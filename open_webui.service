@@ -5,7 +5,9 @@ After=network.target
 [Service]
 ExecStart=/srv/OpenWebUI_Service/.venv/bin/open-webui serve
 WorkingDirectory=/srv/OpenWebUI_Service
+EnvironmentFile=/srv/OpenWebUI_Service/.env
 Restart=always
+RestartSec=3
 User=mega
 Group=mega
 #StandardOutput=null

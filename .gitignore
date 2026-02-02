@@ -10,4 +10,6 @@ wheels/
 .venv
 
 # Project specific ignores
+data/
+.env
 .webui_secret_key

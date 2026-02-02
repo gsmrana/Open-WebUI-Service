@@ -25,10 +25,17 @@ uv lock --upgrade
 uv sync
 ```
 
-## Run the application
+## Run the application (SQLite DB)
 
 ```
 uv run open-webui serve
+```
+
+## Run the application (PostgreSQL)
+
+```
+cp .env.sample .env
+uv run main.py
 ```
 - Browse: http://localhost:8080
 
