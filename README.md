@@ -45,6 +45,9 @@ uv run main.py
 sudo cp open_webui.service /etc/systemd/system/open_webui.service
 sudo systemctl daemon-reload
 sudo systemctl enable open_webui.service
+```
+
+```
 sudo systemctl restart open_webui.service
 ```
 
@@ -54,5 +57,12 @@ sudo systemctl restart open_webui.service
 sudo cp com.openwebui.service.plist /Library/LaunchDaemons/
 sudo chown root:wheel /Library/LaunchDaemons/com.openwebui.service.plist
 sudo chmod 644 /Library/LaunchDaemons/com.openwebui.service.plist
+```
+
+```
+# first start
 sudo launchctl load -w /Library/LaunchDaemons/com.openwebui.service.plist
+
+# restart
+sudo launchctl kickstart -k system/com.openwebui.service
 ```

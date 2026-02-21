@@ -3496,9 +3496,9 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "open-webui" },
-    { name = "psycopg2-binary" },
-    { name = "python-dotenv" },
+    { name = "open-webui", specifier = ">=0.8.3" },
+    { name = "psycopg2-binary", specifier = ">=2.9.11" },
+    { name = "python-dotenv", specifier = ">=1.2.1" },
 ]
 
 [[package]]

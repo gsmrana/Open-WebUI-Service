@@ -9,17 +9,17 @@
     <array>
         <string>/bin/sh</string>
         <string>-c</string>
-        <string>set -a; source /opt/OpenWebUI_Service/.env; set +a; exec /opt/OpenWebUI_Service/.venv/bin/open-webui serve</string>
+        <string>set -a; source /opt/Open-WebUI-Service/.env; set +a; exec /opt/Open-WebUI-Service/.venv/bin/open-webui serve</string>
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/opt/OpenWebUI_Service</string>
+    <string>/opt/Open-WebUI-Service</string>
 
     <key>UserName</key>
-    <string>mega</string>
+    <string>root</string>
 
     <key>GroupName</key>
-    <string>staff</string>
+    <string>wheel</string>
 
     <key>KeepAlive</key>
     <true/>
@@ -28,9 +28,9 @@
     <integer>3</integer>
 
     <key>StandardOutPath</key>
-    <string>/opt/OpenWebUI_Service/openwebui.out.log</string>
+    <string>/opt/Open-WebUI-Service/openwebui.out.log</string>
     
     <key>StandardErrorPath</key>
-    <string>/opt/OpenWebUI_Service/openwebui.err.log</string>
+    <string>/opt/Open-WebUI-Service/openwebui.err.log</string>
 </dict>
 </plist>
