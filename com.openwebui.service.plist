@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.openwebui.service</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/sh</string>
+        <string>-c</string>
+        <string>set -a; source /opt/OpenWebUI_Service/.env; set +a; exec /opt/OpenWebUI_Service/.venv/bin/open-webui serve</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/opt/OpenWebUI_Service</string>
+
+    <key>UserName</key>
+    <string>mega</string>
+
+    <key>GroupName</key>
+    <string>staff</string>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>ThrottleInterval</key>
+    <integer>3</integer>
+
+    <key>StandardOutPath</key>
+    <string>/opt/OpenWebUI_Service/openwebui.out.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/opt/OpenWebUI_Service/openwebui.err.log</string>
+</dict>
+</plist>

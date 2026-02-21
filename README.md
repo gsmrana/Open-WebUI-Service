@@ -47,3 +47,12 @@ sudo systemctl daemon-reload
 sudo systemctl enable open_webui.service
 sudo systemctl restart open_webui.service
 ```
+
+## Install and run launchd service (macOS)
+
+```
+sudo cp com.openwebui.service.plist /Library/LaunchDaemons/
+sudo chown root:wheel /Library/LaunchDaemons/com.openwebui.service.plist
+sudo chmod 644 /Library/LaunchDaemons/com.openwebui.service.plist
+sudo launchctl load -w /Library/LaunchDaemons/com.openwebui.service.plist
+```

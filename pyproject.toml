@@ -5,6 +5,7 @@ description = "Open WebUI Service"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "open-webui>=0.7.2",
-    "psycopg2-binary>=2.9.11",
+    "open-webui",
+    "psycopg2-binary",
+    "python-dotenv",
 ]
