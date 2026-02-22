@@ -7,11 +7,19 @@ ExecStart=/srv/Open-WebUI-Service/.venv/bin/open-webui serve
 WorkingDirectory=/srv/Open-WebUI-Service
 EnvironmentFile=/srv/Open-WebUI-Service/.env
 Restart=always
-RestartSec=3
+RestartSec=30
 User=root
 Group=root
+
+# System Logging
 #StandardOutput=null
 #StandardError=journal
+
+# Custom File Logging
+StandardOutput=append:/srv/Open-WebUI-Service/openwebui.out.log
+StandardError=append:/srv/Open-WebUI-Service/openwebui.err.log
+
+# Flush logs immediately
 #Environment=PYTHONUNBUFFERED=1
 
 [Install]

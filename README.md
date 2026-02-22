@@ -41,28 +41,38 @@ uv run main.py
 
 ## Install and run systemd service (Linux)
 
+Service Setup
 ```
 sudo cp open_webui.service /etc/systemd/system/open_webui.service
 sudo systemctl daemon-reload
 sudo systemctl enable open_webui.service
 ```
 
+Service Start/Restart
 ```
 sudo systemctl restart open_webui.service
 ```
 
 ## Install and run launchd service (macOS)
 
+Service Setup
 ```
 sudo cp com.openwebui.service.plist /Library/LaunchDaemons/
 sudo chown root:wheel /Library/LaunchDaemons/com.openwebui.service.plist
 sudo chmod 644 /Library/LaunchDaemons/com.openwebui.service.plist
 ```
 
+Service First Load
 ```
-# first start
 sudo launchctl load -w /Library/LaunchDaemons/com.openwebui.service.plist
+```
 
-# restart
+Service Stop
+```
+sudo launchctl bootout system /Library/LaunchDaemons/com.openwebui.service.plist
+```
+
+Service Restart
+```
 sudo launchctl kickstart -k system/com.openwebui.service
 ```
